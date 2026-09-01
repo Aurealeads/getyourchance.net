@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SieslaHora - Exclusive Vouchers & Offers</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background-color: #ffffff;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #ff6600;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        .consent {
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .consent a {
+            color: #ff6600;
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #ff6600;
+            color: #ffffff;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #e65c00;
+        }
+
+        .terms-link {
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .terms-link a {
+            color: #ff6600;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="secondpage.html">Privacy Policy</a>
+</nav>
+
+<div class="container">
+
+    <h1>Welcome to SieslaHora</h1>
+
+    <h2>Sign up to receive exclusive vouchers and offers</h2>
+
+    <form id="signupForm">
+
+        <label for="first_name">First Name</label>
+        <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            placeholder="Enter your first name"
+            required
+        >
+
+        <label for="last_name">Last Name</label>
+        <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            placeholder="Enter your last name"
+            required
+        >
+
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+            <option value="">Prefer not to say</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="dob">Date of Birth</label>
+        <input
+            type="date"
+            id="dob"
+            name="dob"
+            required
+        >
+
+        <div class="consent">
+
+            <label>
+                <input type="checkbox" name="age_confirmation" required>
+                I confirm that I am aged 18 or over.
+            </label>
+
+            <label>
+                <input type="checkbox" name="consent_1" required>
+                I agree to receive SieslaHora's newsletter by email, including
+                exclusive vouchers, offers and promotions. I understand that I
+                can withdraw my consent at any time.
+                <a href="secondpage.html" target="_blank">Privacy Policy</a>
+            </label>
+
+            <label>
+                <input type="checkbox" name="consent_2">
+                I agree to receive promotional emails from SieslaHora about
+                products and services offered by selected partner companies.
+                Further information about these partners and how my data may be
+                shared is available in the
+                <a href="secondpage.html" target="_blank">Privacy Policy</a>.
+            </label>
+
+            <label>
+                <input type="checkbox" name="consent_3">
+                I agree that my personal data may be shared with the specific
+                third-party companies identified in the
+                <a href="secondpage.html" target="_blank">Privacy Policy</a>
+                so that they may contact me by email with promotional offers.
+            </label>
+
+        </div>
+
+        <button type="submit">Sign Up Now</button>
+
+    </form>
+
+    <p class="terms-link">
+        By participating, you agree to the
+        <a href="termsandconditions.pdf" target="_blank">
+            terms and conditions of the "SieslaHora" promotion
+        </a>.
+    </p>
+
+</div>
+
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Redirect to success page
+    window.location.href = "success.html";
+});
+</script>
+
+</body>
+</html>
